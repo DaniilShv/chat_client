@@ -8,7 +8,7 @@ const sendButton = document.getElementById("sendButton");
 // 1. Конфигурация соединения с SignalR Хабом
 // Укажите URL, который вы настроили на бэкенде в MapHub<ChatHub>("/chat")
 const connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://localhost:5202/chat") 
+    .withUrl("https://mongrel-cost-disdain.ngrok-free.dev/chat") 
     .withAutomaticReconnect([0, 2000, 5000, 10000]) // Попытки переподключения через 0, 2, 5 и 10 секунд
     .configureLogging(signalR.LogLevel.Information) // Логирование в консоль браузера для дебага
     .build();
